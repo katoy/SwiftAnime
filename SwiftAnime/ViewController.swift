@@ -32,7 +32,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             for index in 1...4 {
                 // 現在のindexに対応するメディア名を生成して対応するUIImageを作成
                 var droidImage = UIImage(named: "\(droid)\(separator)\(direction)\(separator)\(index).gif")
-                imageList.append(droidImage!)
+                // imageList.append(droidImage!)
             }
             imageListArraySet[direction] = imageList
         }
