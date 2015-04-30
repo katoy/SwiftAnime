@@ -29,6 +29,7 @@
 		C0E0080F1AF11D4B0003B26D /* ドロイドちゃん_左へ_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = C0E008071AF11D4B0003B26D /* ドロイドちゃん_左へ_3.gif */; };
 		C0E008101AF11D4B0003B26D /* ドロイドちゃん_左へ_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = C0E008081AF11D4B0003B26D /* ドロイドちゃん_左へ_2.gif */; };
 		C0E008111AF11D4B0003B26D /* ドロイドちゃん_左へ_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = C0E008091AF11D4B0003B26D /* ドロイドちゃん_左へ_1.gif */; };
+		C0E008131AF26BD50003B26D /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0E008121AF26BD50003B26D /* sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		C0E008071AF11D4B0003B26D /* ドロイドちゃん_左へ_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ドロイドちゃん_左へ_3.gif"; sourceTree = "<group>"; };
 		C0E008081AF11D4B0003B26D /* ドロイドちゃん_左へ_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ドロイドちゃん_左へ_2.gif"; sourceTree = "<group>"; };
 		C0E008091AF11D4B0003B26D /* ドロイドちゃん_左へ_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ドロイドちゃん_左へ_1.gif"; sourceTree = "<group>"; };
+		C0E008121AF26BD50003B26D /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sound.mp3; path = ../sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				C0E008071AF11D4B0003B26D /* ドロイドちゃん_左へ_3.gif */,
 				C0E008081AF11D4B0003B26D /* ドロイドちゃん_左へ_2.gif */,
 				C0E008091AF11D4B0003B26D /* ドロイドちゃん_左へ_1.gif */,
+				C0E008121AF26BD50003B26D /* sound.mp3 */,
 			);
 			path = droid;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				C0E0080E1AF11D4B0003B26D /* ドロイドちゃん_左へ_4.gif in Resources */,
 				C0E0080C1AF11D4B0003B26D /* ドロイドちゃん_右へ_3.gif in Resources */,
 				C065C8011AF0BD3500F2EE86 /* ドロイドちゃん_前へ_1.gif in Resources */,
+				C0E008131AF26BD50003B26D /* sound.mp3 in Resources */,
 				C065C8071AF0BD3500F2EE86 /* ドロイドちゃん_後へ_3.gif in Resources */,
 				C065C8061AF0BD3500F2EE86 /* ドロイドちゃん_後へ_2.gif in Resources */,
 				C0E008111AF11D4B0003B26D /* ドロイドちゃん_左へ_1.gif in Resources */,

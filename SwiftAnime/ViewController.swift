@@ -17,8 +17,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     // 画像ファイル名のための定数
     let droid = "ドロイドちゃん"
     let separator = "_"
-    let directions = ["前へ", "後へ", "左へ", "右へ"]
-    let animationDurations = ["0.2", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0"]
+    let directions = ["前へ", "左へ", "後へ", "右へ"]
+    let animationDurations = ["0.3", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0"]
 
     var imageListArraySet = Dictionary< String, Array<UIImage> >()
 
@@ -32,7 +32,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             for index in 1...4 {
                 // 現在のindexに対応するメディア名を生成して対応するUIImageを作成
                 var droidImage = UIImage(named: "\(droid)\(separator)\(direction)\(separator)\(index).gif")
-                // imageList.append(droidImage!)
+                imageList.append(droidImage!)
             }
             imageListArraySet[direction] = imageList
         }
@@ -53,10 +53,17 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         stopAnimation()
     }
 
+    // 停止しているときに表示する画像を現在の進行方向の画像に設定する。
+    func setImage() {
+        let direction = directions[pickerView.selectedRowInComponent(0)]
+        imageView.image = imageListArraySet[direction]![0]
+    }
+
     func stopAnimation() {
         // アニメーションが開始していれば停止
         if imageView.isAnimating() {
             imageView.stopAnimating()
+            setImage()
         }
     }
 
@@ -138,6 +145,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if imageView.isAnimating() {
             startAnimation()
+        } else {
+            setImage()
         }
     }
 }
