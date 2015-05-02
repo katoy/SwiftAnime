@@ -17,8 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-hJ-Du3">
-                                <rect key="frame" x="76" y="550" width="30" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ドロイドちゃん_前へ_1.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Ncx-cs-vEe">
+                                <rect key="frame" x="220" y="20" width="160" height="290"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0w0-Ee-YWR">
+                                <rect key="frame" x="16" y="380" width="568" height="162"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="e5e-BI-Vjr"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-hJ-Du3">
+                                <rect key="frame" x="46" y="550" width="30" height="30"/>
                                 <state key="normal" title="歩く">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -26,8 +35,8 @@
                                     <action selector="btnStart:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kt8-rb-pQO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbO-qx-npZ">
-                                <rect key="frame" x="119" y="550" width="45" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbO-qx-npZ">
+                                <rect key="frame" x="89" y="550" width="45" height="30"/>
                                 <state key="normal" title="止まる">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -35,45 +44,52 @@
                                     <action selector="btnStop:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="f4X-Ax-hIg"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0w0-Ee-YWR">
-                                <rect key="frame" x="16" y="380" width="568" height="162"/>
-                                <connections>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="e5e-BI-Vjr"/>
-                                </connections>
-                            </pickerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ドロイドちゃん_前へ_1.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Ncx-cs-vEe">
-                                <rect key="frame" x="220" y="20" width="160" height="290"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Psh-Zo-0ak">
-                                <rect key="frame" x="481" y="550" width="30" height="30"/>
+                                <rect key="frame" x="534" y="550" width="30" height="30"/>
                                 <state key="normal" title="縮小">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="doPan:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DSp-hl-92Z"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GO7-a7-2N3">
-                                <rect key="frame" x="422" y="550" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GO7-a7-2N3">
+                                <rect key="frame" x="474" y="550" width="30" height="30"/>
                                 <state key="normal" title="拡大">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="doZoom:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GAf-qu-p7Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrX-6B-80N">
+                                <rect key="frame" x="400" y="550" width="60" height="30"/>
+                                <state key="normal" title="リセット">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doReset:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7TC-jV-rvR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Psh-Zo-0ak" firstAttribute="leading" secondItem="GO7-a7-2N3" secondAttribute="trailing" constant="30" id="0Kq-aM-Keh"/>
-                            <constraint firstItem="Psh-Zo-0ak" firstAttribute="top" secondItem="0w0-Ee-YWR" secondAttribute="bottom" constant="8" id="BQA-kX-m80"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="UbO-qx-npZ" secondAttribute="bottom" constant="20" id="DiS-0h-lr7"/>
-                            <constraint firstItem="Psh-Zo-0ak" firstAttribute="top" secondItem="0w0-Ee-YWR" secondAttribute="bottom" constant="8" id="FqH-uU-QyK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Psh-Zo-0ak" secondAttribute="trailing" constant="73" id="G7l-cO-VkP"/>
-                            <constraint firstItem="UbO-qx-npZ" firstAttribute="leading" secondItem="hxk-hJ-Du3" secondAttribute="trailing" constant="13" id="K2e-KG-ewJ"/>
-                            <constraint firstAttribute="centerX" secondItem="Ncx-cs-vEe" secondAttribute="centerX" id="RV2-s0-ox2"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Psh-Zo-0ak" secondAttribute="bottom" constant="20" id="WPA-oF-yo7"/>
-                            <constraint firstItem="hxk-hJ-Du3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="Xej-dP-txH"/>
-                            <constraint firstItem="0w0-Ee-YWR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Xpv-j8-nWE"/>
-                            <constraint firstAttribute="centerX" secondItem="0w0-Ee-YWR" secondAttribute="centerX" id="cEm-TA-fr8"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hxk-hJ-Du3" secondAttribute="bottom" constant="20" id="kKd-t6-ZN4"/>
-                            <constraint firstItem="hxk-hJ-Du3" firstAttribute="top" secondItem="0w0-Ee-YWR" secondAttribute="bottom" constant="8" id="lvS-Qj-IB4"/>
-                            <constraint firstItem="0w0-Ee-YWR" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="oGj-8j-FXY"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="GO7-a7-2N3" secondAttribute="bottom" constant="20" id="uUK-TX-2DM"/>
+                            <constraint firstItem="Ncx-cs-vEe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="0hK-sp-1XM"/>
+                            <constraint firstItem="GO7-a7-2N3" firstAttribute="leading" secondItem="FrX-6B-80N" secondAttribute="trailing" constant="14" id="2lQ-bh-TPN"/>
+                            <constraint firstItem="GO7-a7-2N3" firstAttribute="baseline" secondItem="Psh-Zo-0ak" secondAttribute="baseline" id="8vY-ww-p2o"/>
+                            <constraint firstItem="0w0-Ee-YWR" firstAttribute="top" secondItem="Ncx-cs-vEe" secondAttribute="bottom" constant="70" id="98w-8R-doI"/>
+                            <constraint firstAttribute="centerX" secondItem="Ncx-cs-vEe" secondAttribute="centerX" id="Kyf-Kr-uql"/>
+                            <constraint firstItem="0w0-Ee-YWR" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="PAF-8m-tW2"/>
+                            <constraint firstItem="UbO-qx-npZ" firstAttribute="baseline" secondItem="hxk-hJ-Du3" secondAttribute="baseline" id="QZi-Yd-xt2"/>
+                            <constraint firstItem="UbO-qx-npZ" firstAttribute="baseline" secondItem="FrX-6B-80N" secondAttribute="baseline" id="RI3-8b-I3z"/>
+                            <constraint firstAttribute="centerX" secondItem="0w0-Ee-YWR" secondAttribute="centerX" id="TwE-EK-1Es"/>
+                            <constraint firstItem="UbO-qx-npZ" firstAttribute="leading" secondItem="hxk-hJ-Du3" secondAttribute="trailing" constant="13" id="Uk9-uS-aAA"/>
+                            <constraint firstItem="Psh-Zo-0ak" firstAttribute="leading" secondItem="GO7-a7-2N3" secondAttribute="trailing" constant="30" id="Y88-xK-9Ha"/>
+                            <constraint firstItem="hxk-hJ-Du3" firstAttribute="top" secondItem="0w0-Ee-YWR" secondAttribute="bottom" constant="8" symbolic="YES" id="aWI-Ur-rMD"/>
+                            <constraint firstItem="hxk-hJ-Du3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="eSG-e4-HU2"/>
+                            <constraint firstItem="0w0-Ee-YWR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="pOC-W8-Efp"/>
+                            <constraint firstItem="GO7-a7-2N3" firstAttribute="baseline" secondItem="FrX-6B-80N" secondAttribute="baseline" id="vnb-Wb-mkY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Psh-Zo-0ak" secondAttribute="trailing" constant="20" id="xoc-UH-3kp"/>
                         </constraints>
                     </view>
                     <connections>

@@ -11,6 +11,7 @@
 //     > Xcode6とSwiftでイメージ(画像)やアニメーションを表示する方法
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UIPickerViewDelegate {
 
@@ -22,6 +23,14 @@ class ViewController: UIViewController, UIPickerViewDelegate {
 
     var imageListArraySet = Dictionary< String, Array<UIImage> >()
 
+    // make sure to add this sound to your project
+    var footstepsSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("sound", ofType: "mp3")!)
+    var audioPlayer = AVAudioPlayer()
+
+    var cx : CGFloat = 0
+    var cy : CGFloat = 0
+    var w0 : CGFloat = 0
+    var h0 : CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,11 +45,27 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             }
             imageListArraySet[direction] = imageList
         }
+        // 音楽再生のための設定
+        audioPlayer = AVAudioPlayer(contentsOfURL: footstepsSound, error: nil)
+        audioPlayer.prepareToPlay()
+
+        // 画像の位置
+        let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
+        cx = myBoundSize.width / 2
+        cy = imageView.frame.midY
+        imageView.center = CGPointMake(cx, cy)
+        w0 = imageView.frame.width
+        h0 = imageView.frame.height
+
+        // ピッカーの初期値
+        pickerView.selectRow(0, inComponent: 0, animated: true)
+        pickerView.selectRow(2, inComponent: 1, animated: true)
     }
 
     @IBOutlet weak var pickerView: UIPickerView!
 
     @IBOutlet weak var imageView: UIImageView!
+
 
     @IBAction func btnStart(sender: UIButton) {
         // showAlert(sender.titleLabel!.text!)
@@ -53,12 +78,41 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         stopAnimation()
     }
 
+    @IBAction func doZoom(sender: AnyObject) {
+        changeImageSize(2.0)
+    }
+
+    @IBAction func doPan(sender: AnyObject) {
+        changeImageSize(0.5)
+    }
+
+    @IBAction func doReset(sender: AnyObject) {
+        setImageSize(1.0)
+    }
+
     // 停止しているときに表示する画像を現在の進行方向の画像に設定する。
     func setImage() {
         let direction = directions[pickerView.selectedRowInComponent(0)]
         imageView.image = imageListArraySet[direction]![0]
     }
 
+    // 画像のサイズを相対的に変更する。
+    func changeImageSize(scale : CGFloat){
+        UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+
+            self.imageView.frame = CGRectMake(0, 0,
+                self.imageView.frame.width * scale,
+                self.imageView.frame.height * scale )
+            self.imageView.center = CGPointMake(self.cx, self.cy)
+
+            }, completion: nil)
+    }
+    // 画像のサイズを設定する。
+    func setImageSize(scale : CGFloat) {
+        self.imageView.frame = CGRectMake(0, 0,
+            w0 * scale, h0 * scale)
+        self.imageView.center = CGPointMake(self.cx, self.cy)
+    }
     func stopAnimation() {
         // アニメーションが開始していれば停止
         if imageView.isAnimating() {
@@ -81,6 +135,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
 
         // アニメーションを開始
         imageView.startAnimating()
+        audioPlayer.play()
     }
 
     func showAlert(name : String) {
