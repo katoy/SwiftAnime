@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     let droid = "ドロイドちゃん"
     let separator = "_"
     let directions = ["前へ", "左へ", "後へ", "右へ"]
-    let animationDurations = ["0.3", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0"]
+    let animationDurations = ["0.5", "1.0", "1.5", "2.0", "2.5", "3.0"]
 
     var imageListArraySet = Dictionary< String, Array<UIImage> >()
 
@@ -114,10 +114,11 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         self.imageView.center = CGPointMake(self.cx, self.cy)
     }
     func stopAnimation() {
-        // アニメーションが開始していれば停止
+        // アニメーション中なら、アニメーションと足音を停止
         if imageView.isAnimating() {
             imageView.stopAnimating()
             setImage()
+            audioPlayer.stop()
         }
     }
 
@@ -135,6 +136,13 @@ class ViewController: UIViewController, UIPickerViewDelegate {
 
         // アニメーションを開始
         imageView.startAnimating()
+
+        // 足音を鳴らす
+        audioPlayer.stop()
+        // 0.5 秒の MP3 なので、1 秒でアニメが１周りなら 2回再生させる。
+        audioPlayer.enableRate = true
+        audioPlayer.rate = Float(1.0 * speed)
+        audioPlayer.numberOfLoops = -1
         audioPlayer.play()
     }
 

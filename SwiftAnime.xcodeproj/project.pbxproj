@@ -21,6 +21,7 @@
 		C065C8061AF0BD3500F2EE86 /* ドロイドちゃん_後へ_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = C065C7FA1AF0BD3500F2EE86 /* ドロイドちゃん_後へ_2.gif */; };
 		C065C8071AF0BD3500F2EE86 /* ドロイドちゃん_後へ_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = C065C7FB1AF0BD3500F2EE86 /* ドロイドちゃん_後へ_3.gif */; };
 		C065C8081AF0BD3500F2EE86 /* ドロイドちゃん_後へ_4.gif in Resources */ = {isa = PBXBuildFile; fileRef = C065C7FC1AF0BD3500F2EE86 /* ドロイドちゃん_後へ_4.gif */; };
+		C0CCCAB51AF4A1FB001E07C1 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0CCCAB41AF4A1FB001E07C1 /* sound.mp3 */; };
 		C0E0080A1AF11D4B0003B26D /* ドロイドちゃん_右へ_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = C0E008021AF11D4B0003B26D /* ドロイドちゃん_右へ_1.gif */; };
 		C0E0080B1AF11D4B0003B26D /* ドロイドちゃん_右へ_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = C0E008031AF11D4B0003B26D /* ドロイドちゃん_右へ_2.gif */; };
 		C0E0080C1AF11D4B0003B26D /* ドロイドちゃん_右へ_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = C0E008041AF11D4B0003B26D /* ドロイドちゃん_右へ_3.gif */; };
@@ -29,7 +30,6 @@
 		C0E0080F1AF11D4B0003B26D /* ドロイドちゃん_左へ_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = C0E008071AF11D4B0003B26D /* ドロイドちゃん_左へ_3.gif */; };
 		C0E008101AF11D4B0003B26D /* ドロイドちゃん_左へ_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = C0E008081AF11D4B0003B26D /* ドロイドちゃん_左へ_2.gif */; };
 		C0E008111AF11D4B0003B26D /* ドロイドちゃん_左へ_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = C0E008091AF11D4B0003B26D /* ドロイドちゃん_左へ_1.gif */; };
-		C0E008151AF3D36D0003B26D /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0E008141AF3D36D0003B26D /* sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +61,7 @@
 		C065C7FA1AF0BD3500F2EE86 /* ドロイドちゃん_後へ_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ドロイドちゃん_後へ_2.gif"; sourceTree = "<group>"; };
 		C065C7FB1AF0BD3500F2EE86 /* ドロイドちゃん_後へ_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ドロイドちゃん_後へ_3.gif"; sourceTree = "<group>"; };
 		C065C7FC1AF0BD3500F2EE86 /* ドロイドちゃん_後へ_4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ドロイドちゃん_後へ_4.gif"; sourceTree = "<group>"; };
+		C0CCCAB41AF4A1FB001E07C1 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 		C0E008021AF11D4B0003B26D /* ドロイドちゃん_右へ_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ドロイドちゃん_右へ_1.gif"; sourceTree = "<group>"; };
 		C0E008031AF11D4B0003B26D /* ドロイドちゃん_右へ_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ドロイドちゃん_右へ_2.gif"; sourceTree = "<group>"; };
 		C0E008041AF11D4B0003B26D /* ドロイドちゃん_右へ_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ドロイドちゃん_右へ_3.gif"; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		C0E008071AF11D4B0003B26D /* ドロイドちゃん_左へ_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ドロイドちゃん_左へ_3.gif"; sourceTree = "<group>"; };
 		C0E008081AF11D4B0003B26D /* ドロイドちゃん_左へ_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ドロイドちゃん_左へ_2.gif"; sourceTree = "<group>"; };
 		C0E008091AF11D4B0003B26D /* ドロイドちゃん_左へ_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ドロイドちゃん_左へ_1.gif"; sourceTree = "<group>"; };
-		C0E008141AF3D36D0003B26D /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,11 +162,11 @@
 				C0E008031AF11D4B0003B26D /* ドロイドちゃん_右へ_2.gif */,
 				C0E008041AF11D4B0003B26D /* ドロイドちゃん_右へ_3.gif */,
 				C0E008051AF11D4B0003B26D /* ドロイドちゃん_右へ_4.gif */,
-				C0E008061AF11D4B0003B26D /* ドロイドちゃん_左へ_4.gif */,
-				C0E008071AF11D4B0003B26D /* ドロイドちゃん_左へ_3.gif */,
-				C0E008081AF11D4B0003B26D /* ドロイドちゃん_左へ_2.gif */,
 				C0E008091AF11D4B0003B26D /* ドロイドちゃん_左へ_1.gif */,
-				C0E008141AF3D36D0003B26D /* sound.mp3 */,
+				C0E008081AF11D4B0003B26D /* ドロイドちゃん_左へ_2.gif */,
+				C0E008071AF11D4B0003B26D /* ドロイドちゃん_左へ_3.gif */,
+				C0E008061AF11D4B0003B26D /* ドロイドちゃん_左へ_4.gif */,
+				C0CCCAB41AF4A1FB001E07C1 /* sound.mp3 */,
 			);
 			path = droid;
 			sourceTree = "<group>";
@@ -252,10 +252,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0E008101AF11D4B0003B26D /* ドロイドちゃん_左へ_2.gif in Resources */,
-				C0E008151AF3D36D0003B26D /* sound.mp3 in Resources */,
 				C0E0080E1AF11D4B0003B26D /* ドロイドちゃん_左へ_4.gif in Resources */,
 				C0E0080C1AF11D4B0003B26D /* ドロイドちゃん_右へ_3.gif in Resources */,
 				C065C8011AF0BD3500F2EE86 /* ドロイドちゃん_前へ_1.gif in Resources */,
+				C0CCCAB51AF4A1FB001E07C1 /* sound.mp3 in Resources */,
 				C065C8071AF0BD3500F2EE86 /* ドロイドちゃん_後へ_3.gif in Resources */,
 				C065C8061AF0BD3500F2EE86 /* ドロイドちゃん_後へ_2.gif in Resources */,
 				C0E008111AF11D4B0003B26D /* ドロイドちゃん_左へ_1.gif in Resources */,
