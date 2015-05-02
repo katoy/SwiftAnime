@@ -17,17 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ドロイドちゃん_前へ_1.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Ncx-cs-vEe">
-                                <rect key="frame" x="220" y="20" width="160" height="290"/>
-                            </imageView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0w0-Ee-YWR">
-                                <rect key="frame" x="16" y="380" width="568" height="162"/>
-                                <connections>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="e5e-BI-Vjr"/>
-                                </connections>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-hJ-Du3">
-                                <rect key="frame" x="46" y="550" width="30" height="30"/>
+                                <rect key="frame" x="29" y="550" width="30" height="30"/>
                                 <state key="normal" title="歩く">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -36,7 +27,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbO-qx-npZ">
-                                <rect key="frame" x="89" y="550" width="45" height="30"/>
+                                <rect key="frame" x="98" y="550" width="45" height="30"/>
                                 <state key="normal" title="止まる">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -45,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Psh-Zo-0ak">
-                                <rect key="frame" x="534" y="550" width="30" height="30"/>
+                                <rect key="frame" x="442" y="550" width="30" height="30"/>
                                 <state key="normal" title="縮小">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -54,7 +45,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GO7-a7-2N3">
-                                <rect key="frame" x="474" y="550" width="30" height="30"/>
+                                <rect key="frame" x="554" y="550" width="30" height="30"/>
                                 <state key="normal" title="拡大">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -63,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrX-6B-80N">
-                                <rect key="frame" x="400" y="550" width="60" height="30"/>
+                                <rect key="frame" x="487" y="550" width="60" height="30"/>
                                 <state key="normal" title="リセット">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -71,25 +62,47 @@
                                     <action selector="doReset:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7TC-jV-rvR"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GIA-25-RX3">
+                                <rect key="frame" x="445" y="512" width="131" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="ZqZ-9T-Bgb"/>
+                                </constraints>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Y1P-Tm-VuW">
+                                <rect key="frame" x="27" y="512" width="118" height="31"/>
+                            </slider>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0w0-Ee-YWR">
+                                <rect key="frame" x="16" y="336" width="568" height="162"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="e5e-BI-Vjr"/>
+                                </connections>
+                            </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ドロイドちゃん_前へ_1.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Ncx-cs-vEe">
+                                <rect key="frame" x="220" y="38" width="160" height="290"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ncx-cs-vEe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="0hK-sp-1XM"/>
-                            <constraint firstItem="GO7-a7-2N3" firstAttribute="leading" secondItem="FrX-6B-80N" secondAttribute="trailing" constant="14" id="2lQ-bh-TPN"/>
-                            <constraint firstItem="GO7-a7-2N3" firstAttribute="baseline" secondItem="Psh-Zo-0ak" secondAttribute="baseline" id="8vY-ww-p2o"/>
-                            <constraint firstItem="0w0-Ee-YWR" firstAttribute="top" secondItem="Ncx-cs-vEe" secondAttribute="bottom" constant="70" id="98w-8R-doI"/>
-                            <constraint firstAttribute="centerX" secondItem="Ncx-cs-vEe" secondAttribute="centerX" id="Kyf-Kr-uql"/>
-                            <constraint firstItem="0w0-Ee-YWR" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="PAF-8m-tW2"/>
-                            <constraint firstItem="UbO-qx-npZ" firstAttribute="baseline" secondItem="hxk-hJ-Du3" secondAttribute="baseline" id="QZi-Yd-xt2"/>
-                            <constraint firstItem="UbO-qx-npZ" firstAttribute="baseline" secondItem="FrX-6B-80N" secondAttribute="baseline" id="RI3-8b-I3z"/>
-                            <constraint firstAttribute="centerX" secondItem="0w0-Ee-YWR" secondAttribute="centerX" id="TwE-EK-1Es"/>
-                            <constraint firstItem="UbO-qx-npZ" firstAttribute="leading" secondItem="hxk-hJ-Du3" secondAttribute="trailing" constant="13" id="Uk9-uS-aAA"/>
-                            <constraint firstItem="Psh-Zo-0ak" firstAttribute="leading" secondItem="GO7-a7-2N3" secondAttribute="trailing" constant="30" id="Y88-xK-9Ha"/>
-                            <constraint firstItem="hxk-hJ-Du3" firstAttribute="top" secondItem="0w0-Ee-YWR" secondAttribute="bottom" constant="8" symbolic="YES" id="aWI-Ur-rMD"/>
-                            <constraint firstItem="hxk-hJ-Du3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="eSG-e4-HU2"/>
-                            <constraint firstItem="0w0-Ee-YWR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="pOC-W8-Efp"/>
-                            <constraint firstItem="GO7-a7-2N3" firstAttribute="baseline" secondItem="FrX-6B-80N" secondAttribute="baseline" id="vnb-Wb-mkY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Psh-Zo-0ak" secondAttribute="trailing" constant="20" id="xoc-UH-3kp"/>
+                            <constraint firstItem="hxk-hJ-Du3" firstAttribute="top" secondItem="Y1P-Tm-VuW" secondAttribute="bottom" constant="8" symbolic="YES" id="4CF-gy-6sV"/>
+                            <constraint firstItem="Psh-Zo-0ak" firstAttribute="baseline" secondItem="UbO-qx-npZ" secondAttribute="baseline" id="8p9-Sd-9jc"/>
+                            <constraint firstItem="GO7-a7-2N3" firstAttribute="trailing" secondItem="0w0-Ee-YWR" secondAttribute="trailing" id="EUJ-Ym-EqJ"/>
+                            <constraint firstItem="0w0-Ee-YWR" firstAttribute="centerX" secondItem="Ncx-cs-vEe" secondAttribute="centerX" id="Lua-eq-fG8"/>
+                            <constraint firstItem="UbO-qx-npZ" firstAttribute="leading" secondItem="hxk-hJ-Du3" secondAttribute="trailing" constant="39" id="RC2-4G-iZ2"/>
+                            <constraint firstItem="Y1P-Tm-VuW" firstAttribute="trailing" secondItem="UbO-qx-npZ" secondAttribute="trailing" id="UbN-to-cre"/>
+                            <constraint firstItem="Y1P-Tm-VuW" firstAttribute="top" secondItem="0w0-Ee-YWR" secondAttribute="bottom" constant="14" id="Xkf-qY-qUF"/>
+                            <constraint firstItem="Psh-Zo-0ak" firstAttribute="baseline" secondItem="FrX-6B-80N" secondAttribute="baseline" id="aMq-FJ-Azw"/>
+                            <constraint firstItem="Y1P-Tm-VuW" firstAttribute="leading" secondItem="hxk-hJ-Du3" secondAttribute="leading" id="aXw-JK-BUE"/>
+                            <constraint firstItem="0w0-Ee-YWR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="bMK-GP-xps"/>
+                            <constraint firstItem="hxk-hJ-Du3" firstAttribute="baseline" secondItem="UbO-qx-npZ" secondAttribute="baseline" id="cZ2-R7-5HM"/>
+                            <constraint firstAttribute="bottom" secondItem="hxk-hJ-Du3" secondAttribute="bottom" constant="20" symbolic="YES" id="d6Y-cd-CrK"/>
+                            <constraint firstItem="Y1P-Tm-VuW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="13" id="dbp-FE-aWa"/>
+                            <constraint firstItem="FrX-6B-80N" firstAttribute="leading" secondItem="Psh-Zo-0ak" secondAttribute="trailing" constant="15" id="n30-Ef-85i"/>
+                            <constraint firstItem="GIA-25-RX3" firstAttribute="top" secondItem="Y1P-Tm-VuW" secondAttribute="top" id="nSs-aB-ykW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GIA-25-RX3" secondAttribute="trailing" constant="10" id="qX8-6Z-vCI"/>
+                            <constraint firstItem="GO7-a7-2N3" firstAttribute="baseline" secondItem="FrX-6B-80N" secondAttribute="baseline" id="sgE-fV-Zq2"/>
+                            <constraint firstItem="0w0-Ee-YWR" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="xPh-qa-sSx"/>
+                            <constraint firstItem="0w0-Ee-YWR" firstAttribute="top" secondItem="Ncx-cs-vEe" secondAttribute="bottom" constant="8" id="ybI-3N-omf"/>
+                            <constraint firstItem="GO7-a7-2N3" firstAttribute="leading" secondItem="FrX-6B-80N" secondAttribute="trailing" constant="7" id="zpW-Y6-NKP"/>
                         </constraints>
                     </view>
                     <connections>
